@@ -1,49 +1,75 @@
-import React, { useState } from 'react';
-import reactLogo from './assets/react.svg';
+import React from 'react';
+
 import './App.css';
 
+const  liste =[{
 
+  produit: "lait",
 
-function produit(){
+  id:      0,
 
+},
+ {
+     produit: "chocolat",
 
+     id:       1,
 
-
-
-      return             <ul>
-    <li>  chocolat       </li>
-    <li>   lait          </li>
-    <li>     sucre            </li>
-
-    </ul>;
-
-
-
+  },
+    {
 
 
 
+        produit: "sucre",
+      id: 2,
 
 
-  };
+
+
+    }
+
+    
+
+
+];
 
 
 
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    const btn = document.getElementById(app);
-
-              <div>
-                <produit/>
-    </div>
 
 
+    <div>
+    <h1> Liste de produit </h1>
 
+    <ul>
+          {liste.map(function(item){
+
+
+          return(
+          <li key ={item.id}>
+          <span>{item.produit}, </span>
+
+
+
+
+
+
+          </li>
+        );
+     })}
+    </ul>
+
+
+
+  </div>
   );
-
 }
-ReactDom.render(<App />,btn);
+
+
+
+
+
+
 
 export default App;
